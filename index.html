@@ -28,14 +28,14 @@
 	$(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
 
-		/*
+		
 		if(checkConnection()== "WiFi connection")
 		{alert("conectado");}
 		else
 		{alert("No conectado");
 		}
 		alert("conexion:"+checkConnection());
-	*/
+	
 				
 		slidePrincipal();
 		slideMiniatura();
@@ -255,7 +255,7 @@
 	{
 		document.getElementById("cargando").style.display='';
 		/*Limpiamos contenedores*/
-		document.getElementById("name_SeccionSeccion").innerHTML();
+		/*document.getElementById("name_SeccionSeccion").innerHTML();*/
 		document.getElementById("cps").innerHTML();/*contenedor principal seccion*/
 		document.getElementById("vertical_seccion").innerHTML();
 		document.getElementById("minuto_plaza").innerHTML();
@@ -308,7 +308,7 @@
 	function cargar_seccion(seccion)
 	{
 		document.getElementById("cargando").style.display='';
-		document.getElementById("name_SeccionSeccion").innerHTML();
+		/*document.getElementById("name_SeccionSeccion").innerHTML();*/
 		document.getElementById("cps").innerHTML();/*contenedor principal seccion*/
 		document.getElementById("vertical_seccion").innerHTML();
 		document.getElementById("minuto_plaza").innerHTML();
