@@ -255,12 +255,16 @@
 	{
 		document.getElementById("cargando").style.display='';
 		/*Limpiamos contenedores*/
-		
-		$("#name_SeccionSeccion").html();
+		document.getElementById("name_SeccionSeccion").innerHTML();
+		document.getElementById("cps").innerHTML();/*contenedor principal seccion*/
+		document.getElementById("vertical_seccion").innerHTML();
+		document.getElementById("minuto_plaza").innerHTML();
+		document.getElementById("vs").innerHTML();/*video Seccion*/
+		/*$("#name_SeccionSeccion").html();
 		$(".ContenedorPrincipalSeccion").html();
 		$(".DivVertical").html();
 		$("#minuto_plaza").html();
-		$(".Video_seccion").html();
+		$(".Video_seccion").html();*/
 		
 			$.ajax(
 			{
@@ -304,11 +308,12 @@
 	function cargar_seccion(seccion)
 	{
 		document.getElementById("cargando").style.display='';
-		$("#name_SeccionSeccion").html();
-		$(".ContenedorPrincipalSeccion").html();
-		$(".DivVertical").html();
-		$("#minuto_plaza").html();
-		$(".Video_seccion").html();
+		document.getElementById("name_SeccionSeccion").innerHTML();
+		document.getElementById("cps").innerHTML();/*contenedor principal seccion*/
+		document.getElementById("vertical_seccion").innerHTML();
+		document.getElementById("minuto_plaza").innerHTML();
+		document.getElementById("vs").innerHTML();/*video Seccion*/
+		
 		 $.ajax(
 			{
 
@@ -357,6 +362,7 @@ function LeerNota(id)
 		//$('.ExtrasPlaza').html('<img src="http://166.78.193.53/RecursosApp/ios/imagenes/loading.gif" />');
 			document.getElementById("cargando").style.display='';
 		document.getElementById("div_nt").innerHTML="";
+						$("#name_section").
 						document.getElementById("div_ns").innerHTML="";
 						document.getElementById("div_na").innerHTML="";
 						document.getElementById("div_nfc").innerHTML="";
@@ -546,7 +552,7 @@ function LeerNota(id)
 
   </div>
     <!--Slide Principal Plaza-->
-    <div class="ContenedorPrincipalSeccion">
+    <div class="ContenedorPrincipalSeccion" id="cps">
   
           
           
@@ -566,7 +572,7 @@ function LeerNota(id)
         <div class="Minuto_A_Minuto" id="minuto_plaza">
        
         </div>
-        <div class="Video_seccion"> 
+        <div class="Video_seccion" id="vs"> 
         
         </div>
         
