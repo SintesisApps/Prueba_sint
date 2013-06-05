@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Síntesis</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+
+    <script src="phonegap.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    // Wait for Cordova to load
+    //
+	/*
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    setTimeout(function() {
+    navigator.splashscreen.hide();
+	}, 2000);*/
+	$(document).ready(function(e){
+	document.addEventListener("deviceready", function(){
+		setTimeout(function() {
+    navigator.splashscreen.hide();
+}, 5000)
+		
+		});	
+	});
+
+    </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+  </body>
+</html>
