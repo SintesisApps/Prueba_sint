@@ -27,6 +27,15 @@
 
 	$(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
+		
+		setInterval(function() {navigator.splashscreen.hide();}, 5000);
+		
+	 function onDeviceReady() {
+        document.addEventListener("offline", onOffline, false);
+    	}
+		function onOffline() {
+			alert("No estas conectado");
+    	}
 
 		/*
 		if(checkConnection()== "WiFi connection")
@@ -36,10 +45,8 @@
 		}
 		alert("conexion:"+checkConnection());
 	*/
-	/*
-	setInterval(function() {
-    navigator.splashscreen.hide();
-}, 5000);*/
+	
+	
 				
 		slidePrincipal();
 		slideMiniatura();
