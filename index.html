@@ -43,7 +43,8 @@
 		galeria_video('nacionales');	
 		minuto_minuto();
 		CargarNoticiasHomeGal();
-		
+		/*Impreso*/
+		refrescar_impreso()
 		setInterval(function(){document.getElementById("cargando").style.display='none'},12000);
 		
 	
@@ -229,6 +230,8 @@
 		minuto_minuto();
 		galeria_video('nacionales');	
 		CargarNoticiasHomeGal();
+		/*Impreso*/
+		refrescar_impreso()
 		function slideVertical2()
 			{//ContenedorDivMedio
 				
@@ -427,14 +430,22 @@ function LeerNota(id)
 	}
 
 
+function refrescar_impreso()
+{
+
+$("#ptda_puebla").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/portada.jpg");
+$("#ptda_yucatan").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/portada.jpg");
+$("#ptda_chiapas").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/portada.jpg");
+$("#ptda_hidalgo").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/portada.jpg");
+$("#ptda_oaxaca").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/portada.jpg");
+$("#ptda_tlaxcala").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/portada.jpg");
+$("#ptda_nacional").attr("src","http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/portada.jpg");
+}
+/*limpiamos contenedor*/
+document.getElementById("ContenedorImagenImpreso").innerHTML="";
+
 </script>
 
-
- <script>
- 
-
-  
-  </script>
 
 </head>
 <body>
@@ -706,7 +717,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/puebla.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Puebla');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/portada.jpg">
+              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/portada.jpg" id="ptda_puebla">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -718,7 +729,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/nacional.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Nacional');">
-              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/portada.jpg">
+              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/portada.jpg" id="ptda_nacional">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -731,7 +742,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/tlaxcala.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Tlaxcala');">
-              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/portada.jpg">
+              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/portada.jpg" id="ptda_tlaxcala">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -742,7 +753,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/oaxaca.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Oaxaca');">
-              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/portada.jpg">
+              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/portada.jpg" id="ptda_oaxaca">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -753,7 +764,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/hidalgo.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Hidalgo');">
-              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/portada.jpg">
+              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/portada.jpg" id="ptda_hidalgo">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -765,7 +776,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/chiapas.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Chiapas');">
-              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/portada.jpg">
+              	<img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/portada.jpg" id="ptda_chiapas">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -776,7 +787,7 @@ return false;
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/yucatan.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Yucatan');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/portada.jpg">
+              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/portada.jpg" id="ptda_yucatan">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
