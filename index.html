@@ -809,25 +809,26 @@ return false;
   <div class="panelSeccionTitulo" style="background-image:url(http://166.78.193.53/RecursosApp/ios/imagenes/iconos/azules/home@2x.png);"> Home </div>
   </a>
   <div class="paneSeccionEdicion"> Edicion Impresa </div>
-  
-  <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Nacional');$('#panelSeccionesImpreso').css('left','-250%');">
-  <div class="panelSeccionTitulo"> Nacional </div>
-  </a>
-   <div class="panelSeccionSpacer"> </div>
   <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Puebla');">
   <div class="panelSeccionTitulo"> Puebla </div>
+  </a>
+  
+   <div class="panelSeccionSpacer"> </div>
+  <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Nacional');$('#panelSeccionesImpreso').css('left','-250%');">
+  <div class="panelSeccionTitulo"> Nacional </div>
   </a>
   <div class="panelSeccionSpacer"> </div>
   <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Hidalgo');">
   <div class="panelSeccionTitulo"> Hidalgo </div>
   </a>
   <div class="panelSeccionSpacer"> </div>
-  <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Tlaxcala');">
-  <div class="panelSeccionTitulo"> Tlaxcala </div>
-  </a>
-  <div class="panelSeccionSpacer"> </div>
   <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Oaxaca');">
   <div class="panelSeccionTitulo"> Oaxaca </div>
+  </a>
+  
+  <div class="panelSeccionSpacer"> </div>
+  <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Tlaxcala');">
+  <div class="panelSeccionTitulo"> Tlaxcala </div>
   </a>
   <div class="panelSeccionSpacer"> </div>
   <a href="#impreso-portadas" onClick="$('#panelSeccionesImpreso').css('left','-250%');ImprimirImpresoTodas('Chiapas');">
@@ -875,6 +876,7 @@ return false;
 <script>
 function ImprimirImpresoTodas(plaza)
 	{
+		document.getElementById("ContenedorImagenImpreso").innerHTML="";
 			$.ajax(
 			{
 
