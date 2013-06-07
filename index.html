@@ -64,19 +64,24 @@ navigator.notification.vibrate(2000);
 	$(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
 		
-		setInterval(function() {navigator.splashscreen.hide();}, 5000);
+		//setInterval(function() {navigator.splashscreen.hide();}, 5000);
 
-	
+	/*document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {*/
+        document.addEventListener("offline", onOffline, false);
+    
 				
-		slidePrincipal();
+		/*slidePrincipal();
 		slideMiniatura();
 		slideVertical();
 		galeria_video('nacionales');	
 		minuto_minuto();
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
-		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
-		
+		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);*/
+		function onOffline() {
+		alert("No estas conectada");
+    }
 	
 	}, false);	
 });
