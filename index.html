@@ -24,39 +24,30 @@
 
 
 <script type="text/javascript">
-
+/*
 document.addEventListener("deviceready", onDeviceReady, false);
 	
-	/*function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
-    }*/
 // document.addEventListener("online", phonegapOnline, false);
 	function onDeviceReady() {
       //  document.addEventListener("online", onOnline, false);
-	 // document.addEventListener("pause", onPause, false);
+	 // alert("listo para  usar phone");
 	 document.addEventListener("offline", onOffline, false);
-	 setInterval(function() {navigator.splashscreen.hide();}, 5000);
-
-	
-				
-		slidePrincipal();
-		slideMiniatura();
-		slideVertical();
-		galeria_video('nacionales');	
-		minuto_minuto();
-		CargarNoticiasHomeGal();
-		refrescar_impreso()
-		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
-	 
+	 //document.addEventListener("pause", onPause, false);
     }
 
     // Maneja el evento online
     //
-
+	 function onPause() {
+//Vibration time in miliseconds
+navigator.notification.vibrate(2000);
+}
+    function onOnline() {
+		alert("conectada");
+    }
 
     function onOffline() {
 		alert("No estas conectada");
-    }
+    }*/
 
 /*
 	document.addEventListener("deviceready", onDeviceReady, false);
@@ -69,7 +60,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     }*/
 
 
-/*
+
 	$(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
 		
@@ -87,8 +78,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
 		
 	
-	});	
-});*/
+	}, false);	
+});
 
 		
 	 /*function onDeviceReady() {
