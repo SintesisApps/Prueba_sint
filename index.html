@@ -26,21 +26,24 @@
 <script type="text/javascript">
 
 document.addEventListener("deviceready", onDeviceReady, false);
+
 	function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
+        if(document.addEventListener("offline", onOffline, false)==true)
+		{
+			alert("noconecatdo");	
+		}
 		//document.addEventListener("online", onOnline, false);
 
-		
-		
-		
     }
 
     function onOffline() {
-		alert("No estas conectada");
+		//alert("No estas conectada");
+		return true;
     }
 	 function onOnline() {
 		alert(" estas conectada");
     }
+
 
 /*
 	document.addEventListener("deviceready", onDeviceReady, false);
