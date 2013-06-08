@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Síntesis</title>
+
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
 <meta http-equiv="Pragma" CONTENT="no-cache"><!-- No Guarda cache -->
 
@@ -31,8 +32,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
       //  document.addEventListener("online", onOnline, false);
 	 // alert("listo para  usar phone");
-	document.addEventListener("offline", onOffline, true)
+	//document.addEventListener("offline", onOffline, true)
 	 //document.addEventListener("pause", onPause, false);
+	 if (navigator.onLine) {
+  alert('online')
+} else {
+  alert('offline');
+}
     }
 
     function onOnline() {
