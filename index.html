@@ -28,14 +28,18 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
 	
-// document.addEventListener("online", phonegapOnline, false);
 	function onDeviceReady() {
-      //  document.addEventListener("online", onOnline, false);
-	 // alert("listo para  usar phone");
-	//document.addEventListener("offline", onOffline, true)
-	 //document.addEventListener("pause", onPause, false);
 	 if (navigator.onLine) {
-		  alert('online')
+		  //alert('online')
+	  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
+		slidePrincipal();
+		slideMiniatura();
+		slideVertical();
+		galeria_video('nacionales');	
+		minuto_minuto();
+		CargarNoticiasHomeGal();
+		refrescar_impreso()
+		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
 		} else {
 		  alert('offline');
 		}
