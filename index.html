@@ -30,13 +30,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	
 	function onDeviceReady() {
 	 if (navigator.onLine) {
-		  alert('online')
+		 // alert('online')
 		  
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		  //mostramos div
 		  //ocultamos  footer conexion y div contenedor conexion
-		  document.getElementById("HeaderAlternativo_conex").style.display="none";
-		  document.getElementById("contenedor_conexion").style.display="none";
+		 // document.getElementById("HeaderAlternativo_conex").style.display="none";
+		  //document.getElementById("contenedor_conexion").style.display="none";
 		  
 	  
 		slidePrincipal();
@@ -50,10 +50,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		 else {
 		  alert('offline');
+		  /*
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 
 		  document.getElementById("HeaderAlternativo_conex").style.display="";
-		  document.getElementById("contenedor_conexion").style.display="";
+		  document.getElementById("contenedor_conexion").style.display="";*/
 		}
     }
 
@@ -1062,6 +1063,7 @@ function ImprimirImpresoTodas(plaza)
  
   </div>
 </div>-->
+<!--
 <div id="contenedor_conexion" class="TransicionFadeOut" style="background-image:url(imagenes/black_linen_v2.png)"  >
   <div class="HeaderAlternativo">
     <div style=" display:inline-block; padding-top:0px; width:10%; padding-left:10px;"> <a href="javascript:;" onClick="history.back(-1);"> <img src="imagenes/iconos/azules/regresar@2x.png" width="50" > </a> </div>
@@ -1078,7 +1080,7 @@ function ImprimirImpresoTodas(plaza)
 
 <div class="HeaderAlternativo_conex" style="position:fixed; bottom:0; vertical-align:top; display:none"></div>
 
-
+-->
 <!--conexion -->
 
 
