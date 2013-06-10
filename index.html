@@ -31,6 +31,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
 	 if (navigator.onLine) {
 		  //alert('online')
+		  //mostramos div
+		  document.getElementById("contenedor_general").style.display="";
+		  //ocultamos  footer conexion y div contenedor conexion
+		  document.getElementById("HeaderAlternativo_conex").style.display="none";
+		  document.getElementById("contenedor_conexion").style.display="none";
+		  
 	  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		slidePrincipal();
 		slideMiniatura();
@@ -40,20 +46,15 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
 		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
-		} else {
+		}
+		 else {
 		  alert('offline');
+		  document.getElementById("contenedor_general").style.display="none";
+		  document.getElementById("HeaderAlternativo_conex").style.display="";
+		  document.getElementById("contenedor_conexion").style.display="";
 		}
     }
 
-/*
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
-    }
-
-    function onOffline() {
-		alert("No estas conectada");
-    }*/
 
 
 /*
@@ -77,23 +78,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	});	
 });*/
 
-		
-	 /*function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
-    	}
-		function onOffline() {
-			alert("No estas conectado");
-    	}*/
-
-		/*
-		if(checkConnection()== "WiFi connection")
-		{alert("conectado");}
-		else
-		{alert("No conectado");
-		}
-		alert("conexion:"+checkConnection());
-	*/
-	
 
 
 
@@ -494,6 +478,7 @@ document.getElementById("ContenedorImagenImpreso").innerHTML="";
 
 </head>
 <body>
+<div id="contenedor_general" style="display:none"><!-- conetendor general-->
 <div class="lb-overlay_loading" id="cargando" style="display:''"> <img src="imagenes/loading.gif"> </div>
 <!-- Home -->
 <div id="home" class="content" >
@@ -1059,6 +1044,30 @@ function ImprimirImpresoTodas(plaza)
   <div class="panelSeccionSpacer"> </div>
   <a class="closeSeccion" href="javascript:;" onClick="$('#panelSecciones').css('left','-250%');"></a> </div>
 <!--Panel de Secciones--> 
+</div><!-- fin div contenedor general-->
+
+
+ <!-- conexion-->
+<div id="contenedor_conexion" class="TransicionFadeOut" style="background-image:url(imagenes/black_linen_v2.png)"  >
+  <div class="HeaderAlternativo">
+    <div style=" display:inline-block; width:75%; vertical-align: top; padding-top:10px; text-align:center;"> <img src="imagenes/logo.png" height="25"> </div>
+    
+  </div>
+ 
+  <div style="height:100%; width:100%;">
+    <div class="contNav" style="width:100%; height:100%; background:url(imagenes/wifi.png) no-repeat; background-size:296px; background-position:center center; margin-top:-20px;">
+    </div>
+ 
+  </div>
+</div>
+
+
+
+<div class="HeaderAlternativo_conex" style="position:fixed; bottom:0; vertical-align:top; display:none"></div>
+
+
+<!--conexion -->
+
 
 
 <!--Footer-->
