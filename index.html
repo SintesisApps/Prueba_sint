@@ -31,13 +31,15 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
 	 if (navigator.onLine) {
 		  //alert('online')
+		  
+		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		  //mostramos div
 		  document.getElementById("contenedor_general").style.display="";
 		  //ocultamos  footer conexion y div contenedor conexion
 		  document.getElementById("HeaderAlternativo_conex").style.display="none";
 		  document.getElementById("contenedor_conexion").style.display="none";
 		  
-	  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
+	  
 		slidePrincipal();
 		slideMiniatura();
 		slideVertical();
@@ -49,6 +51,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		 else {
 		  alert('offline');
+		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		  document.getElementById("contenedor_general").style.display="none";
 		  document.getElementById("HeaderAlternativo_conex").style.display="";
 		  document.getElementById("contenedor_conexion").style.display="";
