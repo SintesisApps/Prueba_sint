@@ -34,9 +34,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		  
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		  //mostramos div
-		  //ocultamos  footer conexion y div contenedor conexion
-		  document.getElementById("HeaderAlternativo_conex").style.display="none";
-		 document.getElementById("contenedor_conexion").style.display="none";
+		  
 		  
 	  
 		slidePrincipal();
@@ -46,7 +44,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		minuto_minuto();
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
+		//ocultamos  footer conexion y div contenedor conexion
+		  document.getElementById("HeaderAlternativo_conex").style.display="none";
+		 document.getElementById("contenedor_conexion").style.display="none";
 		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
+		
 		}
 		 else {
 		  alert('offline');
@@ -1064,7 +1066,7 @@ function ImprimirImpresoTodas(plaza)
   </div>
 </div>-->
 
-<div id="contenedor_conexion" class="TransicionFadeOut" style="background-image:url(imagenes/black_linen_v2.png)"  >
+<div id="contenedor_conexion" class="TransicionFadeOut" style="background-image:url(imagenes/black_linen_v2.png); display:none"  >
   <div class="HeaderAlternativo">
     <div style=" display:inline-block; padding-top:0px; width:10%; padding-left:10px;"> <a href="javascript:;" onClick="history.back(-1);"> <img src="imagenes/iconos/azules/regresar@2x.png" width="50" > </a> </div>
     <div style=" display:inline-block; width:75%; vertical-align: top; padding-top:10px; text-align:center;"> <img src="imagenes/logo.png" height="25"> </div>
