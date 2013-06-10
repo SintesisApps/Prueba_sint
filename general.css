@@ -30,6 +30,20 @@ body{
 	
 	
 	}
+	
+	.HeaderAlternativo_conex{
+	background-image:url(imagenes/barra.png);
+	height:44px;
+	font-family:  Helvetica, sans-serif;
+	font-size: 16px;
+	color: #0c6090;
+	width:100%;
+	z-index:2;
+	vertical-align:top;
+	
+	
+	}
+	
 .DialogoPlaza{
 	width:250px;
 	height:30px;
