@@ -33,9 +33,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		 // alert('online')
 		  
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
-		  //mostramos div
+		  //mostramos 
 		  
-		  
+		  document.getElementById("divcontenedor_general").style.display="";
 	  
 		slidePrincipal();
 		slideMiniatura();
@@ -53,10 +53,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		 else {
 		  alert('offline');
 		 
-		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
+		  /*setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 
 		  document.getElementById("HeaderAlternativo_conex").style.display="";
-		  document.getElementById("contenedor_conexion").style.display="";
+		  document.getElementById("contenedor_conexion").style.display="";*/
 		}
     }
 
@@ -483,7 +483,7 @@ document.getElementById("ContenedorImagenImpreso").innerHTML="";
 
 </head>
 <body>
-<!--<div id="contenedor_general" style="display:none"> conetendor general-->
+<div id="contenedor_general" style="display:none"> <!--conetendor general-->
 <div class="lb-overlay_loading" id="cargando" style="display:''"> <img src="imagenes/loading.gif"> </div>
 <!-- Home -->
 <div id="home" class="content" >
@@ -1049,7 +1049,7 @@ function ImprimirImpresoTodas(plaza)
   <div class="panelSeccionSpacer"> </div>
   <a class="closeSeccion" href="javascript:;" onClick="$('#panelSecciones').css('left','-250%');"></a> </div>
 <!--Panel de Secciones--> 
-<!--</div> fin div contenedor general-->
+</div><!-- fin div contenedor general-->
 
 
  <!-- conexion-->
