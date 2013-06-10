@@ -25,49 +25,17 @@
 
 
 <script type="text/javascript">
-
-document.addEventListener("deviceready", onDeviceReady, false);
-	
-// document.addEventListener("online", phonegapOnline, false);
-	function onDeviceReady() {
-      //  document.addEventListener("online", onOnline, false);
-	 // alert("listo para  usar phone");
-	//document.addEventListener("offline", onOffline, true)
-	 //document.addEventListener("pause", onPause, false);
-	 if (navigator.onLine) {
-  alert('online')
-} else {
-  alert('offline');
-}
-    }
-
-    function onOnline() {
-		alert("conectada");
-    }
-
-    function onOffline() {
-		alert("No estas conectada");
-    }
-
-/*
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
-    }
-
-    function onOffline() {
-		alert("No estas conectada");
+/*function onDeviceReady() {
+		
     }*/
-
-
-/*
 	$(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
 		
+		
+		if (navigator.onLine) 
+		{
+		//alert('online')
 		setInterval(function() {navigator.splashscreen.hide();}, 5000);
-
-	
-				
 		slidePrincipal();
 		slideMiniatura();
 		slideVertical();
@@ -76,20 +44,24 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
 		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
+		} 
+		else 
+		{
+		  alert('offline');
+		 // setInterval(function() {navigator.splashscreen.hide();}, 5000);
+		}
+		
+
+	
+				
+		
 		
 	
 	});	
-});*/
+});
 
 		
-	 /*function onDeviceReady() {
-        document.addEventListener("offline", onOffline, false);
-    	}
-		function onOffline() {
-			alert("No estas conectado");
-    	}*/
-
-		/*
+	/*
 		if(checkConnection()== "WiFi connection")
 		{alert("conectado");}
 		else
