@@ -35,7 +35,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
 		  //mostramos 
 		  
-		  document.getElementById("divcontenedor_general").style.display="";
+		  document.getElementById("contenedor_general").style.display="";
 	  
 		slidePrincipal();
 		slideMiniatura();
@@ -53,10 +53,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		 else {
 		  alert('offline');
 		 
-		  /*setInterval(function() {navigator.splashscreen.hide();}, 5000);	
-
+		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
+		   document.getElementById("contenedor_general").style.display="none";
 		  document.getElementById("HeaderAlternativo_conex").style.display="";
-		  document.getElementById("contenedor_conexion").style.display="";*/
+		  document.getElementById("contenedor_conexion").style.display="";
+		  
 		}
     }
 
