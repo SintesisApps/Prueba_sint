@@ -44,10 +44,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		minuto_minuto();
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
+		setInterval(function(){document.getElementById("cargando").style.display='none'},17000);
 		//ocultamos  footer conexion y div contenedor conexion
 		  document.getElementById("HeaderAlternativo_conex").style.display="none";
 		 document.getElementById("contenedor_conexion").style.display="none";
-		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
+		
 		
 		}
 		 else {
