@@ -33,9 +33,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		 // alert('online')
 		  
 		  setInterval(function() {navigator.splashscreen.hide();}, 5000);	
-		  //mostramos 
-		  
-		  document.getElementById("contenedor_general").style.display="";
 	  
 		slidePrincipal();
 		slideMiniatura();
@@ -45,23 +42,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		CargarNoticiasHomeGal();
 		refrescar_impreso()
 		setInterval(function(){document.getElementById("cargando").style.display='none'},19000);
-		document.getElementById("conex_conex").style.display='none';
-		//ocultamos  footer conexion y div contenedor conexion
-		 // document.getElementById("HeaderAlternativo_conex").style.display="none";
-		 //document.getElementById("contenedor_conexion").style.display="none";
 		
 		
 		}
 		 else {
 		  alert('No se detectó conexión a Internet');
-		 
-		  /*setInterval(function() {navigator.splashscreen.hide();}, 5000);	
-		  document.getElementById("contenedor_general").style.display="";
-		   document.getElementById("conex_conex").style.display="";*/
-		 // document.getElementById("HeaderAlternativo").style.display="none";
-		  //document.getElementById("HeaderAlternativo_conex").style.display="";
-		  //document.getElementById("contenedor_conexion").style.display='none';
-		 
 		  
 		}
     }
